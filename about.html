@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style/about.css" />
+    <title>Super Cat Invaders</title>
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <h3>Super Cat Invaders</h3>
+
+      <nav id="nav-bar" class="nav-bar">
+        <ul class="nav-ul">
+          <li class="nav-li">
+            <a
+              href="index.html"
+              class="nav-link"
+              title="Play Super Cat Invaders"
+            >
+              PLAY
+            </a>
+          </li>
+          <li class="nav-li">
+            <img src="img/cat-1.svg" width="18.px" height="18px" />
+          </li>
+          <li class="nav-li">
+            <a
+              href="about.html"
+              class="nav-link"
+              title="Learn about the Author"
+            >
+              ABOUT</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="contents">
+      <div class="left-column">
+        <h2>Hello World!</h2>
+
+        <p>
+          My Name Is William! <br /><br />
+
+          This project was created for my Spring 2020 CS135J Intro to JavaScript
+          Class. <br /><br />
+
+          It was created useing Vanilla JavaScript HTML5 and CSS3 with no
+          imported classes. <br /><br />
+
+          I am useing the HTML 5 canvas to handle all of the Game Elements and
+          Animations! <br /><br />
+
+          If you would like to leave me some feedback feel free to use this
+          form:
+        </p>
+
+        <textarea id="comment" rows="7"></textarea>
+        <input type="button" value="SEND" class="button" onClick="submit();" />
+      </div>
+      <div class="right-column">
+        <img
+          src="img/me-and-luna.jpg"
+          width="350px"
+          height="500px"
+          alt="The author William and his cat luna."
+        />
+      </div>
+    </div>
+
+    <footer id="footer" class="footer">
+      <div class="footer-content">
+        <img src="img/heart-1.svg" width="18px" height="18px" />Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon">
+          www.flaticon.com</a
+        >
+      </div>
+    </footer>
+
+    <script>
+      function submit() {
+        msg = document.getElementById("comment");
+
+        // curently the msg is just cleared
+        msg.value = "";
+      }
+    </script>
+  </body>
+</html>

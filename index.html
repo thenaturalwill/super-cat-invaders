@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="stylesheet" type="text/css" href="style/index.css"> 
+<title>Super Cat Invaders</title>
+</head>
+
+<body>
+
+<header id="header" class="header">
+                   
+  <h3>Super Cat  Invaders</h3>
+
+  <nav id="nav-bar" class="nav-bar">
+    <ul class="nav-ul">
+        <li class="nav-li"><img src="img/cat-1.svg" width="18.px" height="18px" alt="Cat Image"/></li>
+        <li class="nav-li"><a href="index.html" class="nav-link" title="Play Super Cat Invaders">PLAY</a></li>
+        <li class="nav-li"><a href="about.html" class="nav-link" title="Learn about the Author">ABOUT</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="contents">
+    <canvas id="invaders" class="invaders" width="750" height="650" alt="Super Cat Invaders - A JavaScript game created by William Shields. If the game isn't loading please enable JavasSript for this site." ></canvas>
+    
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-info">
+        <center>
+            <h4>Scoreboard</h4>
+            <p id="score" class="sidebar-text">0</p>
+        </center>
+        <hr>
+        <center>
+            <h4>Time Played</h4>
+            <p id="time" class="sidebar-text">0</p>
+        </center>
+        </div> 
+        <div class="sidebar-howto">
+        <center><a href="JavaScript:void(0)" onClick="howToPlay.open();" class="howto">How To Play</a></center>
+        </div>
+    </div>
+</div>
+    
+<img src="img/cat.svg" id="ship" width="0" height="0">
+<img src="img/fish.svg" id="enemy-1" width="0" height="0">
+<img src="img/platform.svg" id="building" width="0" height="0">
+<img src="img/heart-1.svg" id="missile" width="0" height="0">
+<img src="img/fish-1.svg" id="enemyMissile" width="0" height="0">    
+    
+<div id="howToModal" class="modal" onClick="howToPlay.close()">
+    <div class="howTo-modal">
+        <span class="close" onClick="howToPlay.close();">&times;</span>
+        <h2>/////// CONTROLS ///////////////</h2>
+        <div class="justify-nicely">
+            <p><b>Move Left:</b></p> <p>Left Arrow Key</p>
+        </div>
+        <div class="justify-nicely">
+            <p><b>Move Right:</b></p> <p>Right Arrow Key</p>
+        </div>
+        <div class="justify-nicely">
+            <p><b>Shoot Missile:</b></p> <p>Space Bar</p>
+        </div>
+        <br>
+        <h2>/////// POWER-UPS /////////////</h2>
+        <p><b>When your score reaches: </b></p>
+        <div class="row">
+            <div class="split">
+                <p><b>25k:</b> &nbsp;&nbsp; Ship Speed x2</p>
+                <p><b>50k:</b> &nbsp;&nbsp; Ship Speed x3</p>
+                <p><b>100k:</b> &nbsp; Ship Speed x4</p>
+            </div>
+            <div class="split"> 
+                <p><b>35k:</b> &nbsp;&nbsp; Missile Speed x 2</p>
+                <p><b>70k:</b> &nbsp;&nbsp; Missile Speed x 3</p> 
+            </div>
+        </div>
+        <br>
+        <h2>/////// NOTES ///////////////////</h2>
+        <div class="how-body">
+            <p> 
+                <b>Your goal is to clear the screen of all invading space ships.</b><br><br>
+                They will continue to populate from the top of the screen. 
+                <br>To make thanks challening you are limted to <b>five</b> missiles 
+                at a time. They will be cleared from the screen as they hit objects. 
+                <br>If you hit one of your buildings your will lose <b>100</b> Points. 
+                If you get hit by an enemy's missle you will lose a life.<br><br>
+                If the Invaders reach the bottom of the screeen, or you run out of lives
+                its <b>Game Over!</b>.
+            </p>
+        </div>
+        <br>
+    </div> 
+</div>    
+
+<div id="gameOverModal" class="modal" onClick="endGame.close()">
+    <div class="gameover-modal">
+        <span class="close" onClick="endGame.close();">&times;</span>
+        <div class="gameover-container">
+            <h1>GAME OVER</h1>
+            <div class="one-line">
+                <h2>TIME PLAYED:</h2> <h2 id="timeModal">0</h2>
+            </div>   
+            <div class="one-line">
+                <h2>SCORE:</h2> <h2 id="scoreModal">0</h2>
+            </div>
+            <br><br>
+            <h2>Close this Window to Play Again</h2>
+        </div>
+    </div> 
+</div>   
+    
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <img src="img/heart-1.svg" width="18px" height="18px" />Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>   
+    </div>
+</footer>
+
+<script src="js/invaders.js"></script>
+
+</body>
+</html> 
